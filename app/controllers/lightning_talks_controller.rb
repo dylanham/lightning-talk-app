@@ -2,9 +2,7 @@ class LightningTalksController < ApplicationController
   before_action :set_lightning_talk, only:[:show, :edit, :update]
 
   def index
-    lightning_talks = LightningTalk.all
-    @lightning_talks = lightning_talks.order(date: :asc, talk_time: :asc)
-    @completed_talks = lightning_talks.where()
+    @lightning_talks = LightningTalk.all
   end
 
   def show
