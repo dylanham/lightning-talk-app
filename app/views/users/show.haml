@@ -1,13 +1,12 @@
 .page-header
-  .pull-right
-    = link_to 'Index', lightning_talks_path, class: 'btn btn-info'
   %h1= @user.name
+
 %table.table
   %thead
     %tr
       %th Description
       %th Time
-      %th{colspan: 3} Date
+      %th date
   %tbody
     - @user.lightning_talks.each do |talk|
       %tr

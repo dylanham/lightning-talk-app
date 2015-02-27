@@ -12,7 +12,7 @@
   %tbody
     - @lightning_talks.each do |talk|
       %tr
-        %td= link_to talk.user.name, lightning_talk_path(talk)
+        %td= link_to talk.user.name, user_path(talk)
         %td= talk.description
         %td= talk.talk_time.strftime('%l:%M %p')
         %td= talk.date.strftime("%A %m/%d")
